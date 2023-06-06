@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Signup.css">
+    
+<body>
+    <!--Navigation bar-->
+        <div id="nav-placeholder">
+        </div>
+    <script src="nav.js"></script>
+    <!--end of Navigation bar-->
+
+    <div class="container">
+        <h2>สมัครสมาชิก</h2>
+        <form action="" class="Register-form" id="Register-form">
+            <div class="Register-form">
+                <label for="username">ชื่อผู้ใช้งาน</label>
+                <input type="text"  id="username" placeholder="กรุณากรอกชื่อผู้ใช้งาน" maxlength="20" >
+                <small>error message</small>
+            </div>
+
+            <div class="Register-form">
+                <label for="email">อีเมล</label>
+                <input id="email" placeholder="กรุณากรอกอีเมล">
+                <small>error message</small>
+            </div>
+            
+            <div class="Register-form">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" id="password" placeholder="กรุณากรอกรหัสผ่าน" maxlength="16">
+                <small>error message</small>
+            </div>
+
+            <div class="Register-form">
+                <label for="cf_password">ยืนยันรหัสผ่าน</label>
+                <input type="password" id="confirm-password" placeholder="กรุณายืนยันรหัสผ่าน" maxlength="16">
+                <small>error message</small>
+            </div>    
+            <div class="Register-form">
+                <button type="submit" class="btn_register">สมัครสมาชิก</button>
+            </div>
+            
+        </form>
+    </div>
+    <script src="Signup.js"></script>
+</body>
+</html>

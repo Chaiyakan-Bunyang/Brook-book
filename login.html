@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="login.css">
+    <title>เข้าสู่ระบบ</title>
+</head>
+<body>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <!--end of Navigation bar-->
+    <div class="login-container">
+        <div class="login-left">
+            <img class="login-logo" src="IMG/Login_Logo.svg" alt="">
+        </div>
+
+        <div class="login-right">
+            <div class="login-header">
+                <h2>BROOK BOOK</h2>
+            </div>
+            <form class="login-form" id="login-form">
+                <div class="login-form-content">
+                    <div class="form-item" id="form-item">
+                        <label for="email">อีเมล</label>
+                        <input placeholder="กรุณากรอกอีเมลของท่าน" id="email">
+                        <small>Error Message</small>
+                    </div>
+
+                    <div class="form-item">
+                        <label for="password">รหัสผ่าน</label>
+                        <input type="password" placeholder="กรุณากรอกรหัสผ่านของท่าน" id="password">
+                        <small>Error Message</small>
+                    </div>
+
+                    <div class="form-item">
+
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberMeCheckbox" class="inline"/>
+                            <label for="rememberMeCheckbox" id="checkboxLabel">Remember Me</label>
+                        </div>
+                    </div>
+
+                    <button type="submit"  id="btn_login" class="btn_login">เข้าสู่ระบบ</button>
+                </div>
+                <div class="login-form-footer">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook" style="color: #3c85fb;">
+                        </i>
+                        Facebook Login
+                    </a>
+                    <a href="#">
+                        <i class="fa-brands fa-google" style="color: #f21f07;"></i>
+                        Google Login
+                    </a>
+                </div>
+            </form>
+        </div>
+       
+    </div>
+    <script src="nav.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

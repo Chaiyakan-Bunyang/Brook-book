@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="product.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+     <!--this is nav -->
+     <div id="nav-placeholder">
+    </div>
+<section>
+    <div class="product-container">
+        <div class="side-bar">
+            <div class="card-search-bar">
+                    <input class="search" onkeyup="search_Book(this)" id="search" type="text" placeholder="&#xF002; ค้นหา">
+            </div>
+            <div class="card-search-bar">
+                <h2>หมวดหมู่</h2>
+                <button class="sort_btn" onclick="search_product('all')">สินค้าทั้งหมด</button>
+                <button class="sort_btn" onclick="search_product('novel')">นิยาย</button>
+                <button class="sort_btn" onclick="">นิตยสาร</button>
+                <button class="sort_btn" onclick="">การ์ตูน</button>
+                <button class="sort_btn" onclick="">กีฬา</button>
+                <button class="sort_btn" onclick="">สินค้าไลฟ์สไตล์</button>
+                <button class="sort_btn" onclick="">การศึกษา</button>
+                <button class="sort_btn" onclick="search_product('psychology')">จิตวิทยา</button>
+                <button class="sort_btn" onclick="">ธุรกิจ</button>
+                <button class="sort_btn" onclick="">หนังสือต่างประเทศ</button>
+                <button class="sort_btn" onclick="">การเมืองการปกครอง</button>
+                <button class="sort_btn" onclick="">วรรณกรรมเยาวชน</button>
+            </div>
+
+            <div class="card-search-bar">
+                <h2>แนะนำ</h2>
+                <button class="sort_btn">หนังสือยอดนิยม</button>
+                <button class="sort_btn">หนังสือออกใหม่</button>
+                <button class="sort_btn">พรีออเดอร์</button>
+            </div>
+        </div>
+        <div class="product">
+           
+        </div>
+    </div>
+</section>
+
+    <!--End of Nav-->
+    <script src="nav.js"></script> <!-- this script for nav -->
+    <script src="product.js"></script>
+</body>
+</html>
+
+<!--
+     <div class="product-item">
+                <img src="IMG/book_popular_1.jpg" alt="">
+                <div class="text">
+                    <h3 id="book_name">The Comfort Book</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_2.jpg" alt="">
+                <div class="text">
+                    <h3 id="book_name">The Midnight Library</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_3.jpg" alt="">
+                <div class="text">
+                    <h3 id="book_name">Reason to Stay Alive</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_4.jpg" alt="">
+                <div class="text">
+                    <h3>The Human</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="IMG/book_popular_1.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_2.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_3.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_4.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="IMG/book_popular_1.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_2.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_3.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_4.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <img src="IMG/book_popular_1.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_2.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_3.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <img src="IMG/book_popular_4.jpg" alt="">
+                <div class="text">
+                    <h3>ชื่อ</h3>
+                    <h4>ประเภท</h4>
+                    <p>สำนักพิมพ์</p>
+                    <p>ราคา ฿20</p>
+                </div>
+            </div>
+-->

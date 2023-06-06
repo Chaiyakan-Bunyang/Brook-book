@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+*{
+    font-family: 'Noto Sans Thai', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.nav_logo h2{
+    margin-left: 30px;
+    color: #ffffff;
+    font-family: 'Righteous', cursive;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+li{
+    list-style: none;
+}
+.nav-links{
+    margin-right: 10px;
+}
+.nav_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(24, 6, 107, 0.9);
+    padding: 10px;
+    width: 100%;    
+    top: 0;
+    z-index: 100;
+    position: fixed;
+}
+
+.nav_menu{
+    display: flex;
+    font-size: 16px;
+    gap: 1em;
+}   
+
+.nav_menu a:hover{
+    background-color: rgb(14, 160, 99);
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.nav_menu a {
+    padding:5px 25px;
+}
+
+.profile_list{
+    position: relative;
+    transition: 0.1s;
+}
+
+.dropdown{
+    position: absolute;
+    border-radius: 5px;
+    background: rgba(24, 6, 107, 0.9);
+    padding: 2rem 0;
+    top: 30px;
+    right:-15px;
+    display: none;
+    transition: 0.3s;
+}
+/*ใช้กดปุ่มtoggle ในnavแล้วจะแสดงlist ออกมา
+.dropdown.hide
+{
+    transition: 2s;
+    display: block;
+   }
+*/ 
+.profile_list:hover .dropdown{
+    display: block;
+}
+.dropdown li + li{
+    margin-top: 5px;
+}
+
+.dropdown li{
+    text-align: center;
+    width: 9em;
+    padding: 0.5em 0;
+}
+
+
+#checkbox_toggle{
+    display: none;
+}
+.hamburger{
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    color: #fff;
+}
+@media (max-width:918px){
+    .nav_menu{
+        display: none;
+        position: absolute;
+        background-color: #292929;
+        right: 0;
+        left:0;
+        text-align: center;
+        padding: 26px 0;
+    }
+    .nav_menu li:hover{
+        display: inline-block;
+    }
+    .nav_menu li+li {
+        margin-top: 20px;
+    }
+    input[type=checkbox]:checked ~ .nav_menu{
+        display: block;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .dropdown{
+        left: 60%;
+        top: 0px;
+        width: 9em;
+        transform: translate(35%);
+    }
+    .dropdown li:hover{
+        background-color: rgb(14, 160, 99);
+    }
+
+
+
+}
+
